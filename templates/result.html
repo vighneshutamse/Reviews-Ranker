@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+
+{% block table %}
+    <div class="row">
+        <div class="col" style="padding-bottom: 10px;">
+            <h3 class="text-center">{{product_name}}</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-5 ">
+            <div class="positive" style="border: 1px solid black;text-align: center; border-radius:0.25rem ;">
+                <h4>Top Positive Reviews</h4>
+            </div>
+                <div  style="background-color: #e6ffe6;">
+                    {{ positive |safe }}
+                </div>
+        </div>
+        <div class="col-md-5">
+            <div class="negative" style="border: 1px solid black;text-align: center; border-radius: 0.25rem;">
+                <h4>Top Negative Reviews</h4>
+            </div>
+                <div class="negative" style="background-color: #ffebe6;">
+                    {{ negative |safe }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
